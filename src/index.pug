@@ -1,0 +1,14 @@
+//- Корневой файл. Наследует файл шаблона
+extends  pug.templates/index.template
+
+block keywords
+  meta(name="keywords", content="resume writing template, how to create a resume, sample resume, brief personal data, brief biography,> шаблон составления резюме, как правильно составить резюме, пример резюме, краткие анкетные данные, краткая биография, опыт работы, уровень владения программами, скилы графического дизайнера")
+
+block description
+  meta(name="description" content="An example of a correct, clear and concise summary of a graphic designer. The resume template includes such sections as: education, profile, work experience, skills, possession of accompanying software and technologies, as well as the contact information of the applicant.")
+
+block title
+  title Summary
+
+block content
+  include blocks/left-col/left-col
