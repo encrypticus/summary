@@ -1,5 +1,5 @@
 //- Корневой файл. Наследует файл шаблона
-extends  pug.templates/index.template
+extends  blocks/block.templates/layout
 
 block keywords
   meta(name="keywords", content="resume writing template, how to create a resume, sample resume, brief personal data, brief biography,> шаблон составления резюме, как правильно составить резюме, пример резюме, краткие анкетные данные, краткая биография, опыт работы, уровень владения программами, скилы графического дизайнера")
@@ -11,4 +11,11 @@ block title
   title Summary
 
 block content
+  include blocks/hidden-title/hidden-title
   include blocks/left-col/left-col
+    include blocks/about/about
+    include blocks/caption-block/caption-block
+    include blocks/profile/profile
+    include blocks/contact/contact
+    include blocks/skills/skills
+      include blocks/skills-list/skills-list

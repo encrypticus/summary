@@ -6,7 +6,7 @@
   "scripts": {
     "d": "webpack --mode development",
     "p": "webpack --mode production",
-    "s": "webpack-dev-server --mode development --open"
+    "s": "webpack-dev-server --mode development"
   },
   "keywords": [],
   "author": "",

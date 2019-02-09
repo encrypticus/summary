@@ -1,0 +1,9 @@
+mixin skillProgressBar(options)
+  - var totalAmount = 12
+  - var levelShortage = totalAmount - options.level
+  .skills-list__progressbar.skill-progressbar
+    -for(var i=0; i < options.level; i++)
+      span.skill-progressbar__percent
+
+    -for(var i=0; i < levelShortage; i++)
+      span.skill-progressbar__percent.skill-progressbar__percent--theme--grey
