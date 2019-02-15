@@ -6,34 +6,35 @@ mixin software({photoshop = 91, dreamweaver = 82, illustrator = 71, afterEffects
     if (typeof indesign != "number") indesign = 56
     if (typeof htmlCss != "number") htmlCss = 90
 
-  h2.software__title.block-title Software
-  ul.software__list
-    li.software__list-item
-      h3.software__item-title Photoshop
-      .software__progress
-        .software__progress-fill(style = {width: photoshop + "%"})
+  section.software
+    h2.software__title.block-title Software
+    ul.software__list
+      li.software__list-item
+        h3.software__item-title Photoshop
+        .software__progress
+          .software__progress-fill(style = {width: photoshop + "%"})
 
-    li.software__list-item
-      h3.software__item-title Dreamweaver
-      .software__progress
-        .software__progress-fill(style = {width: dreamweaver + "%"})
+      li.software__list-item
+        h3.software__item-title Dreamweaver
+        .software__progress
+          .software__progress-fill(style = {width: dreamweaver + "%"})
 
-    li.software__list-item
-      h3.software__item-title Illustrator
-      .software__progress
-        .software__progress-fill(style = {width: illustrator + "%"})
+      li.software__list-item
+        h3.software__item-title Illustrator
+        .software__progress
+          .software__progress-fill(style = {width: illustrator + "%"})
 
-    li.software__list-item
-      h3.software__item-title After effects
-      .software__progress
-        .software__progress-fill(style = {width: afterEffects + "%"})
+      li.software__list-item
+        h3.software__item-title After effects
+        .software__progress
+          .software__progress-fill(style = {width: afterEffects + "%"})
 
-    li.software__list-item
-      h3.software__item-title Indesign
-      .software__progress
-        .software__progress-fill(style = {width: indesign + "%"})
+      li.software__list-item
+        h3.software__item-title Indesign
+        .software__progress
+          .software__progress-fill(style = {width: indesign + "%"})
 
-    li.software__list-item
-      h3.software__item-title Html&css
-      .software__progress
-        .software__progress-fill(style = {width: htmlCss + "%"})
+      li.software__list-item
+        h3.software__item-title Html&css
+        .software__progress
+          .software__progress-fill(style = {width: htmlCss + "%"})
