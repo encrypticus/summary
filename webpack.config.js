@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');// создает index.html из index.pug
 const CleanWebpackPlugin = require('clean-webpack-plugin');// очищает папку сборки перед пересборкой
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");// обрабатывает css
 
 module.exports = {
   entry: './src/index.js',// точка входа
@@ -31,6 +32,23 @@ module.exports = {
       },
 
       {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader"
+        ]
+      },
+
+      {
+        test: /\.(scss|sass)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader"
+        ]
+      },
+
+      {
         test: /\.pug$/,
         exclude: /node_modules/,
         loader: 'pug-loader?pretty=true'
@@ -55,6 +73,11 @@ module.exports = {
       filename: 'index.html',
       template: 'src/index.pug',
       inject: false
+    }),
+
+    new MiniCssExtractPlugin({
+      filename: "styles.css",
+      chunkFilename: "[id].css"
     })
   ],
 
