@@ -43,7 +43,7 @@ module.exports = {
 
       {
         test: /\.(png|gif|jpg|jpeg)$/,
-        loader: 'file-loader?name=./common.img/[name][hash:7].[ext]'// к имени изображения добавить первые 7 цифр его хэша
+        loader: 'file-loader?name=./img/[name][hash:7].[ext]'// к имени изображения добавить первые 7 цифр его хэша
       }
     ]
   },

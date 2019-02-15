@@ -1,0 +1,17 @@
+mixin contact({address = "Main Street, City.", mail = "contact@domain.com", phone = "555-555-555", website = "www.yourweb.com"} = {})
+  section.contact
+    h2.contact__title.block-title Contact
+    table.contact__table
+      tbody
+        tr
+          td Address
+          td= address
+        tr
+          td E-mail
+          td= mail
+        tr
+          td Phone
+          td= phone
+        tr
+          td Website
+          td= website

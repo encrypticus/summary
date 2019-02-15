@@ -1,5 +1,5 @@
-//- Корневой файл. Наследует файл шаблона
-extends  blocks/block.templates/layout
+extends  blocks/block.templates/index.template
+include layout
 
 block keywords
   meta(name="keywords", content="resume writing template, how to create a resume, sample resume, brief personal data, brief biography,> шаблон составления резюме, как правильно составить резюме, пример резюме, краткие анкетные данные, краткая биография, опыт работы, уровень владения программами, скилы графического дизайнера")
@@ -11,11 +11,31 @@ block title
   title Summary
 
 block content
-  include blocks/hidden-title/hidden-title
-  include blocks/left-col/left-col
-    include blocks/about/about
-    include blocks/caption-block/caption-block
-    include blocks/profile/profile
-    include blocks/contact/contact
-    include blocks/skills/skills
-      include blocks/skills-list/skills-list
+  main.content
+    section.left-col
+      +hidden-title("Photo, first name, last name, profession of applicant, profile, contact, skills")
+      +about
+      +profile
+      +contact
+      +skills({creative: 9, teamwork: 11, innovate: 6, communication: 11})
+
+    section.right-col
+      +hidden-title("Education, experience, Level of ownership of programs and technologies")
+
+      +education([
+        {degree: "Master degree", university: "University name", period: "Feb 2011 - Jun 2014"},
+        {degree: "Bachelor degree", university: "Bachelor university", period: "Feb 2014 - Jun 2017"},
+        {degree: "Doctor degree", university: "Doctor university", period: "Feb 2017 - Jun 2020"},
+        {degree: "God degree", university: "God university", period: "Feb 2020 - Jun 2023"}
+      ])
+
+      +experience([
+        {company: "Company name", job: "Your job here", period: "Feb 2011 - Jun 2014"},
+        {company: "Company name", job: "Your job here", period: "Feb 2011 - Jun 2014"},
+        {company: "Company name", job: "Your job here", period: "Feb 2011 - Jun 2014"}
+      ])
+
+      +software({
+        photoshop: 50, indesign: 87, afterEffects: 45,
+        htmlCss: 76, dreamweaver: 32, illustrator: 87
+      })

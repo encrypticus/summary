@@ -1,0 +1,9 @@
+mixin profile(description = "")
+  section.profile
+    h2.profile__title.block-title Profile
+
+    - if(description)
+      p.profile__description= description
+    - else
+      p.profile__description
+        include ./assets/placeholder.txt
