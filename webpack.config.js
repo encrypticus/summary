@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');// создает index.html из index.pug
 const CleanWebpackPlugin = require('clean-webpack-plugin');// очищает папку сборки перед пересборкой
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");// обрабатывает css
+const styleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',// точка входа
@@ -83,6 +84,15 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "styles.css",
       chunkFilename: "[id].css"
+    }),
+
+      new styleLintPlugin({
+      // configFile: '.stylelintrc',
+      context: 'src',
+      fix: true,
+      files: '**/*.scss',
+      failOnError: false,
+      quiet: false,
     })
   ],
 

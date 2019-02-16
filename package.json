@@ -23,8 +23,32 @@
     "pug": "^2.0.3",
     "pug-loader": "^2.4.0",
     "sass-loader": "^7.1.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-airbnb": "0.0.0",
+    "stylelint-order": "^2.0.0",
+    "stylelint-scss": "^3.5.3",
+    "stylelint-webpack-plugin": "^0.10.5",
     "webpack": "^4.29.0",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-airbnb",
+    "plugins": [
+      "stylelint-order"
+    ],
+    "rules": {
+      "indentation": "tab",
+      "order/properties-order": [
+        "position",
+        "z-index",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "margin",
+        "padding"
+      ]
+    }
   }
 }
