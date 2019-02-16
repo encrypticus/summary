@@ -1,11 +1,16 @@
 mixin skills({creative = 9, teamwork = 11, innovate = 6, communication = 11} = {})
   -
-    var totalPoint = 12;
+    const totalPoint = 12;
 
-    if (creative > totalPoint || creative < 0 || typeof creative != "number") creative = totalPoint;
-    if (teamwork > totalPoint || teamwork < 0 || typeof teamwork != "number") teamwork = totalPoint;
-    if (innovate > totalPoint || innovate < 0 || typeof innovate != "number") innovate = totalPoint;
-    if (communication > totalPoint || communication < 0 || typeof communication != "number") communication = totalPoint;
+    if (!isValidArg(creative)) creative = totalPoint;
+    if (!isValidArg(teamwork)) teamwork = totalPoint;
+    if (!isValidArg(innovate)) innovate = totalPoint;
+    if (!isValidArg(communication)) communication = totalPoint;
+
+    function isValidArg(arg) {
+      if (arg > totalPoint || arg < 0 || typeof arg != "number") return false;
+      return true;
+    }
 
   section.skills
     h2.skills__title.block-title

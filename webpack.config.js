@@ -21,7 +21,7 @@ module.exports = {
     open: true// открыть странцу в браузере при запуске сервера
   },
 
-  watch: true,// отслеживать файлы в директории src для горячей пересборке
+  watch: true,// отслеживать файлы в директории src для горячей пересборки
 
   module: {// модули, обрабатывающие файлы с указаным расширением
     rules: [
@@ -62,6 +62,11 @@ module.exports = {
       {
         test: /\.(png|gif|jpg|jpeg)$/,
         loader: 'file-loader?name=./img/[name][hash:7].[ext]'// к имени изображения добавить первые 7 цифр его хэша
+      },
+
+      {
+        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+        loader: 'file-loader?name=./fonts/[name].[ext]',
       }
     ]
   },
@@ -87,6 +92,6 @@ module.exports = {
    * "экстендится" без указания расширения
    */
   resolve: {
-    extensions: ['.pug']
+    extensions: ['.pug', '.woff', '.ttf', '.svg']
   }
 };
