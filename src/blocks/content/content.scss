@@ -1,5 +1,15 @@
 .content {
-	max-width: 1280px;
-	margin: 0 auto;
-	font-family: "Myriad Pro Regular";
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 30px 5% 99px 5%;
+  box-sizing: border-box;
+  text-align: justify;
+
+  @include outline;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 60px 99px 4.7%;
+  }
 }

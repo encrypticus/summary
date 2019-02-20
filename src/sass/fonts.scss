@@ -1,17 +1,26 @@
 @font-face {
-	font-weight: normal;
-	font-style: normal;
-	font-family: "Myriad Pro Regular";
-	src: url("./assets/fonts/Myriad_Pro_Regular.woff") format("woff"),
-		url("./assets/fonts/Myriad_Pro_Regular.ttf") format("truetype"),
-		url("./assets/fonts/Myriad_Pro_Regular.svg") format("svg");
+  font-family: "Myriad Pro Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Myriad_Pro_Regular.woff") format("woff"),
+    url("./assets/fonts/Myriad_Pro_Regular.ttf") format("truetype"),
+    url("./assets/fonts/Myriad_Pro_Regular.svg") format("svg");
 }
 
 @font-face {
-	font-weight: bold;
-	font-style: normal;
-	font-family: "Myriad Pro Bold";
-	src: url("./assets/fonts/Myriad_Pro_Bold.woff") format("woff"),
-		url("./assets/fonts/Myriad_Pro_Bold.ttf") format("truetype"),
-		url("./assets/fonts/Myriad_Pro_Bold.svg") format("svg");
+  font-family: "Myriad Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Myriad_Pro_Bold.woff") format("woff"),
+    url("./assets/fonts/Myriad_Pro_Bold.ttf") format("truetype"),
+    url("./assets/fonts/Myriad_Pro_Bold.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Myriad-Pro-Light-SemiExtended";
+  font-style: normal;
+  font-weight: normal;
+  src: url("./assets/fonts/Myriad-Pro-Light-SemiExtended.woff") format("woff"),
+    url("./assets/fonts/Myriad-Pro-Light-SemiExtended.ttf") format("truetype"),
+    url("./assets/fonts/Myriad-Pro-Light-SemiExtended.svg") format("svg");
 }

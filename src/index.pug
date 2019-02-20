@@ -13,14 +13,14 @@ block title
 block content
   main.content
     section.left-col
-      +hidden-title("Photo, first name, last name, profession of applicant, profile, contact, skills")
+      +visually-hidden("Photo, first name, last name, profession of applicant, profile, contact, skills")
       +about
       +profile
       +contact
       +skills({creative: 9, teamwork: 11, innovate: 6, communication: 11})
 
     section.right-col
-      +hidden-title("Education, experience, Level of ownership of programs and technologies")
+      +visually-hidden("Education, experience, Level of ownership of programs and technologies")
 
       +education([
         {degree: "Master degree", university: "University name", period: "Feb 2011 - Jun 2014"},

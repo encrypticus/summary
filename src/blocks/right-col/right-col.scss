@@ -1,8 +1,7 @@
-// В этом файле должны быть стили для БЭМ-блока right-col, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .right-col {
+  padding-top: 79px;
 
-	$block-name:                &; // #{$block-name}__element
+  @media (min-width: $tablet-width) {
+    width: 56.4878892733564%;// 653px / 1280px
+  }
 }

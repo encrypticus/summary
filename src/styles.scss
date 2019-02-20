@@ -1,3 +1,17 @@
+@import "sass/mixins";
+
+@import "sass/variables";
+
 @import "sass/fonts";
 
+@import "sass/common";
+
+@import "blocks/visually-hidden/visually-hidden";
+
 @import "blocks/content/content";
+
+@import "blocks/left-col/left-col";
+
+@import "blocks/right-col/right-col";
+
+@import "blocks/about/about";

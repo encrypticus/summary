@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');// создает index
 const CleanWebpackPlugin = require('clean-webpack-plugin');// очищает папку сборки перед пересборкой
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");// обрабатывает css
 const styleLintPlugin = require('stylelint-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',// точка входа
@@ -12,15 +13,16 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),// директория, в которой будет лежать выходной файл
   },
 
-  devServer: {// локальный сервер перезагрузки, hot reload
-    overlay: true,
-    // host: '192.168.1.33',
-    host: 'localhost',// имя хоста
-    contentBase: path.join(__dirname, 'dist'),
-    watchContentBase: true,
-    index: 'index.html',
-    open: true// открыть странцу в браузере при запуске сервера
-  },
+  // devServer: {// локальный сервер перезагрузки, hot reload
+  //   overlay: true,
+  //   // host: '192.168.14.2',
+  //   port: 8080,
+  //   host: 'localhost',// имя хоста
+  //   contentBase: path.join(__dirname, 'dist'),
+  //   watchContentBase: true,
+  //   index: 'index.html',
+  //   open: true// открыть странцу в браузере при запуске сервера
+  // },
 
   watch: true,// отслеживать файлы в директории src для горячей пересборки
 
@@ -86,13 +88,19 @@ module.exports = {
       chunkFilename: "[id].css"
     }),
 
-      new styleLintPlugin({
+    new styleLintPlugin({
       // configFile: '.stylelintrc',
-      context: 'src',
+      context: './',
       fix: true,
-      files: '**/*.scss',
-      failOnError: false,
+      files: ['**/*.scss', '**/*.css'],
+      // failOnError: false,
       quiet: false,
+    }),
+
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3000,
+      proxy: 'http://localhost:8080/'
     })
   ],
 
@@ -102,6 +110,6 @@ module.exports = {
    * "экстендится" без указания расширения
    */
   resolve: {
-    extensions: ['.pug', '.woff', '.ttf', '.svg']
+    extensions: ['.js', '.pug', '.woff', '.ttf', '.svg']
   }
 };

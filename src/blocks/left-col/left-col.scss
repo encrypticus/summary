@@ -1,8 +1,6 @@
-// В этом файле должны быть стили для БЭМ-блока left-col, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .left-col {
-
-	$block-name:                &; // #{$block-name}__element
+  @media (min-width: $tablet-width) {
+    width: 36.93771626297578%;// 427px / 1280px
+    padding-top: 91px;
+  }
 }
