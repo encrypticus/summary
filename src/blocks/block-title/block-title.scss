@@ -1,20 +1,31 @@
 .block-title {
-  //  position: relative;
-  //  margin: 0;
-  //  font-size: 2.625rem;
-  //  font-family: "Myriad Pro Bold";
-  //
-  //  color: $dark-blue;
-  //  //font-weight: 700;
-  //  text-transform: uppercase;
-  //
-  //  &:before,
-  //  &:after {
-  //    content: "";
-  //    position: absolute;
-  //  }
-  //
-  //  &:after {
-  //    background-color: #3d6cb0;
-  //  }
+  display: flex;
+  align-items: center;
+  margin: 0;
+
+  font-size: 2rem;
+  font-family: "Myriad Pro Bold";
+
+  color: $dark-blue;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+
+  @media (min-width: $desktop-width-up) {
+    font-size: 2.625rem;
+  }
+
+  &:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+  }
+
+  &:after {
+    content: "";
+    margin-left: 10px;
+    height: 6px;
+    background-color: #3d6cb0;
+  }
 }

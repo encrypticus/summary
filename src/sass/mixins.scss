@@ -1,3 +1,5 @@
+// Добавляет обводку элементу для облегчения верстки.
+// Принимает $color: цвет линии в любом допустимом для CSS формате | inherit | invert
 @mixin outline($color: red) {
   outline: 1px solid $color;
 }
