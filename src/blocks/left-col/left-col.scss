@@ -1,6 +1,10 @@
 .left-col {
   @media (min-width: $tablet-width) {
-    width: 36.93771626297578%;// 427px / 1280px
+    width: 45%;// 427px / 1280px
     padding-top: 91px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 36.93771626297578%;// 427px / 1280px
   }
 }

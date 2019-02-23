@@ -1,0 +1,47 @@
+.profile {
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+
+    font-size: 2rem;
+    font-family: "Myriad Pro Bold";
+
+    color: $dark-blue;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+
+    @media (min-width: $desktop-width) {
+      font-size: 2.625rem;
+    }
+
+    &:before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      margin-right: 8px;
+      background-image: url("./assets/img/svg/icon-profile.svg");
+      background-repeat: no-repeat;
+
+      @media (min-width: $desktop-width) {
+        width: 76px;
+        height: 74px;
+      }
+    }
+
+    &:after {
+      content: "";
+      margin-left: 10px;
+
+      width: 40.98360655737705%;
+      height: 6px;
+      background-color: #3d6cb0;
+    }
+
+  }
+
+  &__description {
+    margin: 0;
+  }
+}

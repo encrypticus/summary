@@ -68,8 +68,18 @@ module.exports = {
       },
 
       {
-        test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
         loader: 'file-loader?name=./fonts/[name].[ext]',
+      },
+
+      {
+        test:/fonts(.)*.svg/,
+        loader: 'file-loader?name=./fonts/[name].[ext]'
+      },
+
+      {
+        test: /svg(.)*.svg/,
+        loader: 'file-loader?name=./img/[name][hash:7].[ext]'
       }
     ]
   },

@@ -1,7 +1,10 @@
 .right-col {
-  padding-top: 79px;
-
   @media (min-width: $tablet-width) {
-    width: 56.4878892733564%;// 653px / 1280px
+    padding-top: 79px;
+    width: 50%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 56.4878892733564%; // 653px / 1280px
   }
 }

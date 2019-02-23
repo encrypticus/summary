@@ -42,38 +42,70 @@ input[type="radio"].visually-hidden {
 
 .content {
   max-width: 1280px;
+  min-width: 320px;
   margin: 0 auto;
-  padding: 30px 5% 99px 5%;
+  padding: 50px 4% 99px 4%;
   box-sizing: border-box;
-  text-align: justify;
-  outline: 1px solid red; }
-  @media (min-width: 768px) {
-    .content {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 60px 99px 4.7%; } }
+  text-align: justify; }
 
 @media (min-width: 768px) {
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2% 99px 2%; } }
+
+@media (min-width: 1280px) {
+
+  .content {
+    padding: 0 60px 99px 4.84375%; } }
+
+@media (min-width: 768px) {
+
   .left-col {
-    width: 36.93771626297578%;
+    width: 45%;
     padding-top: 91px; } }
 
-.right-col {
-  padding-top: 79px; }
-  @media (min-width: 768px) {
-    .right-col {
-      width: 56.4878892733564%; } }
+@media (min-width: 1280px) {
+
+  .left-col {
+    width: 36.93771626297578%; } }
+
+@media (min-width: 768px) {
+
+  .right-col {
+    padding-top: 79px;
+    width: 50%; } }
+
+@media (min-width: 1280px) {
+
+  .right-col {
+    width: 56.4878892733564%; } }
+
+.about {
+  margin-bottom: 57px; }
 
 .about__container-outer {
-  width: 40%;
+  width: 56.20608899297424%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 21px; }
-  @media (min-width: 1280px) {
-    .about__container-outer {
-      margin-left: 23.65339578454333%;
-      margin-right: 0;
-      width: 56.44028103044496%; } }
+
+@media (min-width: 480px) {
+
+  .about__container-outer {
+    width: 35%; } }
+
+@media (min-width: 768px) {
+
+  .about__container-outer {
+    width: 56.20608899297424%; } }
+
+@media (min-width: 1280px) {
+
+  .about__container-outer {
+    margin-left: 23.65339578454333%;
+    margin-right: 0; } }
 
 .about__container-inner {
   position: relative;
@@ -96,44 +128,92 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   background-color: #3d6cb0; }
 
-.about__name, .about__surname, .about__profession {
+.about__name,
+.about__surname,
+.about__profession {
   margin-top: 0;
   margin-bottom: 0;
   text-align: center;
   text-transform: uppercase; }
-  @media (min-width: 1280px) {
-    .about__name, .about__surname, .about__profession {
-      text-align: left; } }
+
+@media (min-width: 1280px) {
+
+  .about__name,
+  .about__surname,
+  .about__profession {
+    text-align: left; } }
 
 .about__name {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-family: "Myriad-Pro-Light-SemiExtended"; }
-  @media (min-width: 768px) {
-    .about__name {
-      font-size: 3.375rem; } }
-  @media (min-width: 1280px) {
-    .about__name {
-      margin-left: 18.50117096018735%; } }
+
+@media (min-width: 1280px) {
+
+  .about__name {
+    font-size: 3.375rem;
+    margin-left: 18.50117096018735%; } }
 
 .about__surname {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: "Myriad Pro Bold";
   line-height: .6; }
-  @media (min-width: 768px) {
-    .about__surname {
-      font-size: 4rem; } }
-  @media (min-width: 1280px) {
-    .about__surname {
-      margin-left: 17.79859484777518%; } }
+
+@media (min-width: 1280px) {
+
+  .about__surname {
+    font-size: 4rem;
+    margin-left: 17.79859484777518%; } }
 
 .about__profession {
-  font-size: 1.3rem;
   font-family: "Myriad Pro Bold";
   line-height: 2.9; }
-  @media (min-width: 768px) {
-    .about__profession {
-      font-size: 1.625rem; } }
-  @media (min-width: 1280px) {
-    .about__profession {
-      margin-left: 25.99531615925059%; } }
+
+@media (min-width: 1280px) {
+
+  .about__profession {
+    font-size: 1.625rem;
+    margin-left: 25.99531615925059%; } }
+
+.profile__title {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 2rem;
+  font-family: "Myriad Pro Bold";
+  color: #3d6cb0;
+  text-transform: uppercase;
+  margin-bottom: 12px; }
+
+@media (min-width: 1280px) {
+
+  .profile__title {
+    font-size: 2.625rem; } }
+
+.profile__title:before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  margin-right: 8px;
+  background-image: url(./img/icon-profile826fe45.svg);
+  background-repeat: no-repeat; }
+
+@media (min-width: 1280px) {
+
+  .profile__title:before {
+    width: 76px;
+    height: 74px; } }
+
+.profile__title:after {
+  content: "";
+  margin-left: 10px;
+  width: 40.98360655737705%;
+  height: 6px;
+  background-color: #3d6cb0; }
+
+.profile__description {
+  margin: 0; }
+
+.education__list {
+  margin: 0;
+  padding: 0; }
 
