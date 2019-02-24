@@ -3,3 +3,10 @@
 @mixin outline($color: red) {
   outline: 1px solid $color;
 }
+
+// Сбрасывает маркеры и отступы элементов списков
+@mixin reset-list() {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

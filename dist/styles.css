@@ -190,6 +190,7 @@ input[type="radio"].visually-hidden {
   width: 36.0655737704918%; }
 
 .education__list {
+  list-style-type: none;
   margin: 0;
   padding: 0; }
 

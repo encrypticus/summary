@@ -1,3 +1,11 @@
+//- Создает блок profile
+
+//- Принимает:
+  description {string} - контент абзаца
+
+//- Вызов:
+  +profile("Hello, world!")
+
 mixin profile(description = "")
   section.profile
     h2.profile__title.block-title Profile

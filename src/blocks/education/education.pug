@@ -1,3 +1,14 @@
+//- Создает блок education
+
+//- Принимает:
+  options {array}                          - массив объектов
+    options[{object.degree}] {string}      - научная степень
+    options[{object.university}] {string}  - место учебы
+    options[{object.period}] {string}      - период обучения
+
+//- Вызов:
+  +education([{degree: "Master degree", university: "University name", period: "Feb 2011 - Jun 2014"}]
+
 mixin education(options = [{degree: "Master degree", university: "University name", period: "Feb 2011 - Jun 2014"}])
   section.education
     h2.education__title.block-title Education

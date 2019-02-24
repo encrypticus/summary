@@ -1,3 +1,15 @@
+//- Создает блок контактов
+
+//- Принимает:
+  object                     - список строк
+    object.address {string}  - адрес
+    object.mail {string}     - электронный ящик
+    object.phone {string}    - номер телефона
+    object.website {string}  - адрес сайта
+
+//- Вызов:
+  +contact({address: "Main Street, City.", mail: "contact@domain.com", phone: "555-555-555", website: "www.yourweb.com"})
+
 mixin contact({address = "Main Street, City.", mail = "contact@domain.com", phone = "555-555-555", website = "www.yourweb.com"} = {})
   section.contact
     h2.contact__title.block-title Contact

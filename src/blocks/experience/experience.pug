@@ -1,3 +1,14 @@
+//- Создает блок experience
+
+//- Принимает:
+  options {array}                       - массив объектов
+    options[{object.company}] {string}  - название компании
+    options[{object.job}] {string}      - занимаемоя должность
+    options[{object.period}] {string}   - период работы
+
+//- Вызов:
+  +experience([{company: "Company name", job: "Your job here", period: "Feb 2011 - Jun 2014"}])
+
 mixin experience(options = [{company: "Company name", job: "Your job here", period: "Feb 2011 - Jun 2014"}])
   section.experience
     h2.experience__title.block-title Experience

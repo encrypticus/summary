@@ -1,3 +1,14 @@
+//- Создает блок about
+
+//- Принимает:
+  object                        - список строк
+    object.name {string}        - имя
+    object.surname {string}     - фамилия
+    object.profession {string}  - профессия
+
+//- Вызов:
+  +about({name: "Name here", surname: "Surname", profession: "Graphic designer"})
+
 mixin about({name = "Name here", surname = "Surname", profession = "Graphic designer"} = {})
   section.about
     .about__container-outer
