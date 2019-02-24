@@ -1,18 +1,22 @@
+// Блок контакта
 .contact {
 
   &__title {
 
+    // Иконка заголовка блока
     &:before {
-      background-image: url("./assets/img/svg/icon-contact.svg"); //
+      background-image: url("./assets/img/svg/icon-contact.svg");
 
+      // Изменение размера иконки на десктопе в соответствии с pixel perfect
       @media (min-width: $desktop-width-up) {
-        width: 74px; //
-        height: 74px; //
+        width: 74px;
+        height: 74px;
       }
     }
 
+    // Декоративный элемент-полоска в заголовке
     &:after {
-      width: 36.0655737704918%; //
+      width: 36.0655737704918%;
     }
   }
 

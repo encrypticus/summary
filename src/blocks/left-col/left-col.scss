@@ -5,7 +5,7 @@
     padding-top: 91px;
   }
 
-  // Переопределение ширины блока на "десктопе" в соответствии с pixel perfect
+  // Переопределение ширины блока на десктопе в соответствии с pixel perfect
   @media (min-width: $desktop-width-up) {
     width: 36.93771626297578%;// 427px / 1280px
   }

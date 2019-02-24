@@ -1,3 +1,5 @@
+// Блок заголовка, миксуется к элементам profile__title, contact__title, skills__title,
+// education__title, experience__title, software__title 
 .block-title {
   display: flex;
   align-items: center;
@@ -10,10 +12,12 @@
   text-transform: uppercase;
   margin-bottom: 12px;
 
+  // Изменение размера шрифта в соответствии с pixel perfect
   @media (min-width: $desktop-width-up) {
     font-size: 2.625rem;
   }
 
+  // Иконка заголовка
   &:before {
     content: "";
     width: 60px;
@@ -21,7 +25,8 @@
     margin-right: 10px;
     background-repeat: no-repeat;
   }
-
+  
+  // Декоративный элемент-полоска в заголовке
   &:after {
     content: "";
     margin-left: 10px;
