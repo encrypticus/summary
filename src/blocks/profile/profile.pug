@@ -11,7 +11,7 @@ mixin profile(description = "")
     h2.profile__title.block-title Profile
 
     - if(description)
-      p.profile__description= description
+        p.profile__description= description
     - else
-      p.profile__description
-        include ./assets/placeholder.txt
+        p.profile__description
+          include ./assets/placeholder.txt

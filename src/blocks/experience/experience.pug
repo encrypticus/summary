@@ -18,7 +18,7 @@ mixin experience(options = [{company: "Company name", job: "Your job here", peri
           p.experience__company!= `${option.company}<span>// ${option.period}</span>`
           p.experience__job= option.job
           - if (option.description)
-            p.experience__description= option.description
+              p.experience__description= option.description
           - else
-            p.experience__description
-              include ./assets/placeholder.txt
+              p.experience__description
+                include ./assets/placeholder.txt
