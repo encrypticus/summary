@@ -17,6 +17,8 @@ mixin education(options = [{degree: "Master degree", university: "University nam
         li.education__list-item
           p.education__degree!= `${option.degree}<span>// ${option.period}</span>`
           p.education__university= option.university
+          //- Если указанный аргумент передан, сделать его текстовым содержимым элемента
+          	иначе вставить текст по умолчанию из файла
           - if (option.description)
             p.education__description= option.description
           - else

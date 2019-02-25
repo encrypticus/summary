@@ -1,5 +1,18 @@
+//- Создает блок скиллов
+
+//- Принимает:
+	object - список чисел
+		object.creative {number} 			- скилл креативности
+		object.teamwork {number} 			- скилл командной работы
+		object.innovate {number} 			- скилл новаторства
+		object.communication {number} - скилл коммуникабельности
+		
+//- Вызов:
+	skills+({creative: 9, teamwork: 11, innovate: 6, communication: 11})
+	
 mixin skills({creative = 9, teamwork = 11, innovate = 6, communication = 11} = {})
   -
+  	//- Верхний предел уровня развития скилла
     const totalPoint = 12;
 
     if (!isValidArg(creative)) creative = totalPoint;
@@ -7,6 +20,12 @@ mixin skills({creative = 9, teamwork = 11, innovate = 6, communication = 11} = {
     if (!isValidArg(innovate)) innovate = totalPoint;
     if (!isValidArg(communication)) communication = totalPoint;
 
+		//- Проверяет на допустипомость переданное значение уровня скилла
+			Принимает:
+				arg {number} число от 0 до 12 включительно
+			Возвращает:
+				true | false
+				
     function isValidArg(arg) {
       if (arg > totalPoint || arg < 0 || typeof arg != "number") return false;
       return true;
@@ -18,8 +37,10 @@ mixin skills({creative = 9, teamwork = 11, innovate = 6, communication = 11} = {
       li.skills__list-item
         h3.skills__item-title Creative
         .skills__points
+        	//- отрисовка заполненных кругов
           -for (let i = 0; i < creative; i++)
             span.skills__point
+          //- отрисовка пустых кругов
           -for (let i = 0, emptyPoint = totalPoint - creative; i < emptyPoint; i++)
             span.skills__point.skills__point_empty
 

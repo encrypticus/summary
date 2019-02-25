@@ -1,3 +1,17 @@
+//- Создает блок software
+
+//- Принимает:
+	object - список чисел
+		object.photoshop {number} 		- уровень владения photoshop
+		object.dreamweaver {number} 	- уровень владения dreamweaver
+		object.illustrator {number} 	- уровень владения illustrator
+		object.afterEffects {number} 	- уровень владения after effects
+		object.indesign {number} 			- уровень владения indesign
+		object.htmlCss {number} 			- уровень владения html и css
+		
+//- Вызов:
+	software+({photoshop: 91, dreamweaver: 82, illustrator: 71, afterEffects: 62, indesign: 56, htmlCss: 90})
+
 mixin software({photoshop = 91, dreamweaver = 82, illustrator = 71, afterEffects = 62, indesign = 56, htmlCss = 90} = {})
   -
     if (typeof photoshop != "number") photoshop = 91
