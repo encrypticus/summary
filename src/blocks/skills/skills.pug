@@ -25,7 +25,6 @@ mixin skills({creative = 9, teamwork = 11, innovate = 6, communication = 11} = {
       arg {number} число от 0 до 12 включительно
     Возвращает:
       true | false
-
   -
     function isValidArg(arg) {
       if (arg > totalPoint || arg < 0 || typeof arg != "number") return false;

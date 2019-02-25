@@ -14,11 +14,22 @@
 
 mixin software({photoshop = 91, dreamweaver = 82, illustrator = 71, afterEffects = 62, indesign = 56, htmlCss = 90} = {})
   -
-    if (typeof photoshop != "number") photoshop = 91
-    if (typeof dreamweaver != "number") dreamweaver = 82
-    if (typeof illustrator != "number") illustrator = 71
-    if (typeof indesign != "number") indesign = 56
-    if (typeof htmlCss != "number") htmlCss = 90
+    if (!isValidArg(photoshop)) photoshop = 91
+    if (!isValidArg(dreamweaver)) dreamweaver = 82
+    if (!isValidArg(illustrator)) illustrator = 71
+    if (!isValidArg(indesign)) indesign = 56
+    if (!isValidArg(htmlCss)) htmlCss = 90
+
+  //- Проверяет на допустимость переданное значение
+    Принимает:
+      arg {number} число от 0 до 100 включительно
+    Возвращает:
+    true | false
+  -
+    function isValidArg(arg) {
+      if (typeof arg != "number" || arg < 0 || arg > 100) return false;
+      return true;
+    }
 
   section.software
     h2.software__title.block-title Software
