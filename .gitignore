@@ -4,3 +4,4 @@ native\ code/
 package-lock.json
 createBlock.js
 config.js
+dist/

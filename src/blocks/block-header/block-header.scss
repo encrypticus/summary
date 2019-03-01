@@ -1,3 +1,5 @@
+// Универсальный блок заголовка разделов страницы
+
 .block-header {
 
   &__title {
@@ -21,7 +23,6 @@
       content: "";
       width: 60px;
       height: 60px;
-      margin-right: 10px;
       background-repeat: no-repeat;
     }
 
@@ -37,7 +38,9 @@
     &_profile {
       margin-bottom: 14px;
 
+      // Иконка заголовка за модификатором
       &::before {
+        margin-right: 10px;
         background-image: url("./blocks/block-header/img/icon-profile.svg");
 
         // Изменение размера иконки на десктопе в соответстви с pixel perfect
@@ -49,53 +52,74 @@
       }
     }
 
-    &_contact::before {
-      background-image: url("./blocks/block-header/img/icon-contact.svg");
+    &_contact {
 
-      // Изменение размера иконки на десктопе в соответстви с pixel perfect
-      @media (min-width: $desktop-width-up) {
-        width: 74px;
-        height: 74px;
+      // Иконка заголовка за модификатором
+      &::before {
+        margin-right: 12px;
+        background-image: url("./blocks/block-header/img/icon-contact.svg");
+
+        // Изменение размера иконки на десктопе в соответстви с pixel perfect
+        @media (min-width: $desktop-width-up) {
+          width: 74px;
+          height: 74px;
+        }
       }
     }
 
-    &_skills::before {
-      background-image: url("./blocks/block-header/img/icon-skills.svg");
+    &_skills {
 
-      // Изменение размера иконки на десктопе в соответстви с pixel perfect
-      @media (min-width: $desktop-width-up) {
-        width: 74px;
-        height: 74px;
+      // Иконка заголовка за модификатором
+      &::before {
+        background-image: url("./blocks/block-header/img/icon-skills.svg");
+
+        // Изменение размера иконки на десктопе в соответстви с pixel perfect
+        @media (min-width: $desktop-width-up) {
+          width: 74px;
+          height: 74px;
+        }
       }
     }
 
-    &_education::before {
-      background-image: url("./blocks/block-header/img/icon-edu.svg");
+    &_education {
 
-      // Изменение размера иконки на десктопе в соответстви с pixel perfect
-      @media (min-width: $desktop-width-up) {
-        width: 76px;
-        height: 74px;
+      // Иконка заголовка за модификатором
+      &::before {
+        background-image: url("./blocks/block-header/img/icon-edu.svg");
+
+        // Изменение размера иконки на десктопе в соответстви с pixel perfect
+        @media (min-width: $desktop-width-up) {
+          width: 76px;
+          height: 74px;
+        }
       }
     }
 
-    &_experience::before {
-      background-image: url("./blocks/block-header/img/icon-exp.svg");
+    &_experience {
 
-      // Изменение размера иконки на десктопе в соответстви с pixel perfect
-      @media (min-width: $desktop-width-up) {
-        width: 79px;
-        height: 76px;
+      // Иконка заголовка за модификатором
+      &::before {
+        background-image: url("./blocks/block-header/img/icon-exp.svg");
+
+        // Изменение размера иконки на десктопе в соответстви с pixel perfect
+        @media (min-width: $desktop-width-up) {
+          width: 79px;
+          height: 76px;
+        }
       }
     }
 
-    &_software::before {
-      background-image: url("./blocks/block-header/img/icon-software.svg");
+    &_software {
 
-      // Изменение размера иконки на десктопе в соответстви с pixel perfect
-      @media (min-width: $desktop-width-up) {
-        width: 76px;
-        height: 74px;
+      // Иконка заголовка за модификатором
+      &::before {
+        background-image: url("./blocks/block-header/img/icon-software.svg");
+
+        // Изменение размера иконки на десктопе в соответстви с pixel perfect
+        @media (min-width: $desktop-width-up) {
+          width: 76px;
+          height: 74px;
+        }
       }
     }
 
