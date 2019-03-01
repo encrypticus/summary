@@ -1,26 +1,6 @@
 // Блок профиля
 .profile {
 
-  &__title {
-
-    // Иконка заголовка блока
-    &:before {
-      background-image: url("./assets/img/svg/icon-profile.svg");
-
-      // Изменение размера иконки на десктопе в соответстви с pixel perfect
-      @media (min-width: $desktop-width-up) {
-        width: 76px;
-        height: 74px;
-      }
-    }
-
-    // Декоративный элемент-полоска в заголовке
-    &:after {
-      width: 40.98360655737705%;
-    }
-
-  }
-
   &__description {
     margin: 0;
     margin-bottom: 49px;

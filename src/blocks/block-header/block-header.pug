@@ -1,0 +1,11 @@
+mixin block-header(title = "profile")
+  -
+    if (title != "profile" &&
+    title != "contact" &&
+    title != "skills" &&
+    title != "education" &&
+    title != "experience" &&
+    title != "software") title = "profile";
+
+  section.block-header
+    h2.block-header__title(class = `block-header__title_${title}`)= title

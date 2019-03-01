@@ -1,4 +1,4 @@
-extends  blocks/block.templates/index.template
+extends  blocks/block.templates/index.template.pug
 include layout
 
 block keywords
@@ -15,13 +15,17 @@ block content
     section.left-col
       +visually-hidden("Photo, first name, last name, profession of applicant, profile, contact, skills")
       +about
+      +block-header("profile")
       +profile
+      +block-header("contact")
       +contact
+      +block-header("skills")
       +skills({creative: 9, teamwork: 11, innovate: 6, communication: 11})
 
     section.right-col
       +visually-hidden("Education, experience, Level of ownership of programs and technologies")
 
+      +block-header("education")
       +education([
         {degree: "Master degree", university: "University name", period: "Feb 2011 - Jun 2014"},
         {degree: "Bachelor degree", university: "Bachelor university", period: "Feb 2014 - Jun 2017"},
@@ -29,12 +33,14 @@ block content
         {degree: "God degree", university: "God university", period: "Feb 2020 - Jun 2023"}
       ])
 
+      +block-header("experience")
       +experience([
         {company: "Company name", job: "Your job here", period: "Feb 2011 - Jun 2014"},
         {company: "Company name", job: "Your job here", period: "Feb 2011 - Jun 2014"},
         {company: "Company name", job: "Your job here", period: "Feb 2011 - Jun 2014"}
       ])
 
+      +block-header("software")
       +software({
         photoshop: 50, indesign: 87, afterEffects: 45,
         htmlCss: 76, dreamweaver: 32, illustrator: 87

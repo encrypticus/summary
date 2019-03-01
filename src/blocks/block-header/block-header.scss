@@ -1,0 +1,104 @@
+.block-header {
+
+  &__title {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    font-size: 2rem;
+    font-family: "Myriad Pro Bold";
+
+    color: $dark-blue;
+    text-transform: uppercase;
+
+    // Изменение размера шрифта на десктопе в соответствии с pixel perfect
+    @media (min-width: $desktop-width-up) {
+      font-size: 2.625rem;
+    }
+
+    // Иконка заголовка
+    &:before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+      background-repeat: no-repeat;
+    }
+
+    // Декоративный элемент-полоска в заголовке
+    &:after {
+      content: "";
+      flex-grow: 1;
+      margin-left: 10px;
+      height: 6px;
+      background-color: #3d6cb0;
+    }
+
+    &_profile {
+      margin-bottom: 14px;
+
+      &::before {
+        background-image: url("./blocks/block-header/img/icon-profile.svg");
+
+        // Изменение размера иконки на десктопе в соответстви с pixel perfect
+        @media (min-width: $desktop-width-up) {
+          width: 76px;
+          height: 74px;
+
+        }
+      }
+    }
+
+    &_contact::before {
+      background-image: url("./blocks/block-header/img/icon-contact.svg");
+
+      // Изменение размера иконки на десктопе в соответстви с pixel perfect
+      @media (min-width: $desktop-width-up) {
+        width: 74px;
+        height: 74px;
+      }
+    }
+
+    &_skills::before {
+      background-image: url("./blocks/block-header/img/icon-skills.svg");
+
+      // Изменение размера иконки на десктопе в соответстви с pixel perfect
+      @media (min-width: $desktop-width-up) {
+        width: 74px;
+        height: 74px;
+      }
+    }
+
+    &_education::before {
+      background-image: url("./blocks/block-header/img/icon-edu.svg");
+
+      // Изменение размера иконки на десктопе в соответстви с pixel perfect
+      @media (min-width: $desktop-width-up) {
+        width: 76px;
+        height: 74px;
+      }
+    }
+
+    &_experience::before {
+      background-image: url("./blocks/block-header/img/icon-exp.svg");
+
+      // Изменение размера иконки на десктопе в соответстви с pixel perfect
+      @media (min-width: $desktop-width-up) {
+        width: 79px;
+        height: 76px;
+      }
+    }
+
+    &_software::before {
+      background-image: url("./blocks/block-header/img/icon-software.svg");
+
+      // Изменение размера иконки на десктопе в соответстви с pixel perfect
+      @media (min-width: $desktop-width-up) {
+        width: 76px;
+        height: 74px;
+      }
+    }
+
+  }
+
+}
