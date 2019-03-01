@@ -52,10 +52,18 @@ module.exports = {
       },
 
       {
-        test: /\.pug$/,
-        exclude: /node_modules/,
-        loader: 'pug-loader?pretty=true'
+        test:/\.pug$/,
+        loaders: [
+          'html-loader',
+          'pug-html-loader?{"pretty": true, "exports": false}'
+        ]
       },
+
+      // {
+      //   test: /\.pug$/,
+      //   exclude: /node_modules/,
+      //   loader: 'pug-loader?pretty=true'
+      // },
 
       {
         test: /\.(ico)$/,// фавиконку положить в корень сайта
@@ -73,12 +81,14 @@ module.exports = {
       },
 
       {
-        test:/fonts(.)*.svg/,
+        test:/\.svg$/,
+        exclude: [/img/],
         loader: 'file-loader?name=./fonts/[name].[ext]'
       },
 
       {
-        test: /svg(.)*.svg/,
+        test:/\.svg$/,
+        exclude: [/fonts/],
         loader: 'file-loader?name=./img/[name][hash:7].[ext]'
       }
     ]

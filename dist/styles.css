@@ -141,53 +141,71 @@ input[type="radio"].visually-hidden {
         font-size: 1.625rem;
         margin-left: 25.99531615925059%; } }
 
-.block-title {
+.block-header__title {
   display: flex;
   align-items: center;
   margin: 0;
   font-size: 2rem;
   font-family: "Myriad Pro Bold";
   color: #3d6cb0;
-  text-transform: uppercase;
-  margin-bottom: 12px; }
+  text-transform: uppercase; }
   @media (min-width: 1280px) {
-    .block-title {
+    .block-header__title {
       font-size: 2.625rem; } }
-  .block-title:before {
+  .block-header__title:before {
     content: "";
     width: 60px;
     height: 60px;
     margin-right: 10px;
     background-repeat: no-repeat; }
-  .block-title:after {
+  .block-header__title:after {
     content: "";
+    flex-grow: 1;
     margin-left: 10px;
     height: 6px;
     background-color: #3d6cb0; }
-
-.profile__title:before {
-  background-image: url(./img/icon-profile826fe45.svg); }
-  @media (min-width: 1280px) {
-    .profile__title:before {
-      width: 76px;
-      height: 74px; } }
-
-.profile__title:after {
-  width: 40.98360655737705%; }
+  .block-header__title_profile {
+    margin-bottom: 14px; }
+    .block-header__title_profile::before {
+      background-image: url(./img/icon-profile826fe45.svg); }
+      @media (min-width: 1280px) {
+        .block-header__title_profile::before {
+          width: 76px;
+          height: 74px; } }
+  .block-header__title_contact::before {
+    background-image: url(./img/icon-contactcda1f44.svg); }
+    @media (min-width: 1280px) {
+      .block-header__title_contact::before {
+        width: 74px;
+        height: 74px; } }
+  .block-header__title_skills::before {
+    background-image: url(./img/icon-skillse5ba78e.svg); }
+    @media (min-width: 1280px) {
+      .block-header__title_skills::before {
+        width: 74px;
+        height: 74px; } }
+  .block-header__title_education::before {
+    background-image: url(./img/icon-edu451aad2.svg); }
+    @media (min-width: 1280px) {
+      .block-header__title_education::before {
+        width: 76px;
+        height: 74px; } }
+  .block-header__title_experience::before {
+    background-image: url(./img/icon-expfe984a3.svg); }
+    @media (min-width: 1280px) {
+      .block-header__title_experience::before {
+        width: 79px;
+        height: 76px; } }
+  .block-header__title_software::before {
+    background-image: url(./img/icon-software9a561fd.svg); }
+    @media (min-width: 1280px) {
+      .block-header__title_software::before {
+        width: 76px;
+        height: 74px; } }
 
 .profile__description {
   margin: 0;
   margin-bottom: 49px; }
-
-.contact__title:before {
-  background-image: url(./img/icon-contactcda1f44.svg); }
-  @media (min-width: 1280px) {
-    .contact__title:before {
-      width: 74px;
-      height: 74px; } }
-
-.contact__title:after {
-  width: 36.0655737704918%; }
 
 .education__list {
   list-style-type: none;
