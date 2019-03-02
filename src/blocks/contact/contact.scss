@@ -1,4 +1,28 @@
 // Блок контакта
 .contact {
 
+  &__table {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  &__table td {
+    padding: 0;
+    padding-bottom: 29px;
+  }
+
+  // Левые ячейки таблицы
+  &__table td:nth-child(1) {
+    font-size: 21px;
+
+    color: $dark-blue;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  // Правые ячейки таблицы
+  &__table td:nth-child(2) {
+    font-size: 1.3125em; // 21px / 16px
+  }
+
 }
