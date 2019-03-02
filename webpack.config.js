@@ -100,7 +100,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.pug',
-      inject: false
+      inject: "head",
+      favicon: "src/summary.ico"
     }),
 
     new MiniCssExtractPlugin({
