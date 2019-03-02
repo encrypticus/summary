@@ -2,20 +2,22 @@
 
 //- Принимает:
   options {array}                       - массив объектов
-    options[{object.company}] {string}  - название компании
-    options[{object.job}] {string}      - занимаемоя должность
+    options[{object.company}] {string}  - название компании или научная степень
+    options[{object.job}] {string}      - занимаемая должность или место учебы
     options[{object.period}] {string}   - период работы
 
 //- Вызов:
   +experience([{company: "Company name", job: "Your job here", period: "Feb 2011 - Jun 2014"}])
 
-mixin experience(options = [{company: "Company name", job: "Your job here", period: "Feb 2011 - Jun 2014"}])
+mixin experience(options = [{title: "Company name", subtitle: "Your job here", period: "Feb 2011 - Jun 2014"}])
   section.experience
     ul.experience__list
       each option in options
         li.experience__list-item
-          p.experience__company!= `${option.company}<span>// ${option.period}</span>`
-          p.experience__job= option.job
+          p.experience__title!= `${option.title}<span>// ${option.period}</span>`
+          p.experience__subtitle= option.subtitle
+          //- Если указанный аргумент передан, сделать его текстовым содержимым элемента
+                      иначе вставить текст по умолчанию из файла
           - if (option.description)
               p.experience__description= option.description
           - else

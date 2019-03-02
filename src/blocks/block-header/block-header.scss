@@ -87,6 +87,7 @@
 
       // Иконка заголовка за модификатором
       &::before {
+        margin-right: 22px;
         background-image: url("./blocks/block-header/img/icon-edu.svg");
 
         // Изменение размера иконки на десктопе в соответстви с pixel perfect
