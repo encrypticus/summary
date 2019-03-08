@@ -219,7 +219,8 @@ input[type="radio"].visually-hidden {
       .block-header__title_experience::after {
         margin-left: 4px; } }
   .block-header__title_software {
-    margin-top: 56px; }
+    margin-top: 56px;
+    margin-bottom: 23px; }
     .block-header__title_software::before {
       background-image: url(./img/icon-software9a561fd.svg); }
       @media (min-width: 1280px) {
@@ -340,4 +341,38 @@ input[type="radio"].visually-hidden {
   @media (min-width: 1280px) {
     .experience__description {
       padding-left: 56px; } }
+
+.software__list {
+  width: 98.62174578866769%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-left: auto; }
+  @media (min-width: 768px) {
+    .software__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; } }
+
+@media (min-width: 768px) {
+  .software__list-item {
+    width: 44.56521739130435%; } }
+
+.software__item-title {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-size: 1.6875rem;
+  font-family: "Myriad Pro Regular";
+  font-weight: normal;
+  text-transform: uppercase; }
+
+.software__progress {
+  width: 100%;
+  height: 24px;
+  margin-bottom: 20px;
+  background-color: #e6e6e6; }
+
+.software__progress-fill {
+  background-color: #3d6cb0;
+  height: inherit; }
 
