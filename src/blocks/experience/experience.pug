@@ -9,12 +9,12 @@
 //- Вызов:
   +experience([{company: "Company name", job: "Your job here", period: "Feb 2011 - Jun 2014"}])
 
-mixin experience(options = [{title: "Company name", subtitle: "Your job here", period: "Feb 2011 - Jun 2014"}])
+mixin experience(options = [{title: "Company name ", subtitle: "Your job here", period: "// Feb 2011 - Jun 2014"}])
   section.experience
     ul.experience__list
       each option in options
         li.experience__list-item
-          p.experience__title!= `${option.title}<span>// ${option.period}</span>`
+          p.experience__title(class = attributes.class)!= `${option.title}<span> ${option.period}</span>`
           p.experience__subtitle= option.subtitle
           //- Если указанный аргумент передан, сделать его текстовым содержимым элемента
                       иначе вставить текст по умолчанию из файла

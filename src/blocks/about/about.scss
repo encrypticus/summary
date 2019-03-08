@@ -82,35 +82,36 @@
   }
 
   &__name {
-    font-size: 2.1rem; // 54px / 16px
+    //font-size: 2.1rem;
+    font-size: 3.375rem; // 54px / 16px
     font-family: "Myriad-Pro-Light-SemiExtended";
 
     // переопределение размеров текста и отступа на десктопе в соответствие с pixel perfect
     @media (min-width: $desktop-width-up) {
-      font-size: 3.375rem; // 54px / 16px
       margin-left: 18.50117096018735%; // 79px / 427px
     }
   }
 
   &__surname {
-    font-size: 2.5rem;
+    //font-size: 2.5rem;
+    font-size: 4rem; // 64px / 16px;
     font-family: "Myriad Pro Bold";
     line-height: .6;
 
     // Переопределение размеров текста и отступа на десктопе в соответстви с pixel perfect
     @media (min-width: $desktop-width-up) {
-      font-size: 4rem; // 64px / 16px;
       margin-left: 17.79859484777518%; // 76px / 427px
     }
   }
 
   &__profession {
+    font-size: 1.625rem; // 26px / 16px
     font-family: "Myriad Pro Bold";
     line-height: 2.9;
 
     // Переопределение размеров текста и отступа на десктопе в соответствии с pixel perfect
     @media (min-width: $desktop-width-up) {
-      font-size: 1.625rem; // 26px / 16px
+
       margin-left: 25.99531615925059%; // 111px / 427px
     }
   }

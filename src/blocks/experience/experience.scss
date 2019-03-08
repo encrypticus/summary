@@ -3,4 +3,78 @@
   &__list {
     @include reset-list;
   }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    margin-bottom: 1px;
+    padding-left: 30px;
+
+    font-size: 1.6875rem; // 27px / 16px
+    font-family: "Myriad Pro Bold";
+    text-transform: uppercase;
+
+    @media (min-width: $desktop-width-up) {
+      padding-left: 8.575803981623277%; // 56px / 653px
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 15px;
+      height: 15px;
+
+      border-radius: 50%;
+      background-color: #000;
+
+      @media (min-width: $desktop-width-up) {
+        margin-left: 14px;
+        top: 8px;
+
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    span {
+      font-family: "Myriad Pro Regular";
+      color: #020202;
+      text-transform: none;
+
+      @media (min-width: $tablet-width-up) {
+        margin-left: 5px;
+      }
+    }
+
+    &_blue {
+      color: $dark-blue;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    padding-left: 30px;
+    margin-bottom: 4px;
+
+    font-size: 1.6875rem; // 27px / 16px
+    font-family: "Myriad Pro Regular";
+
+    text-transform: uppercase;
+
+    @media (min-width: $desktop-width-up) {
+      padding-left: 8.269525267993874%; // 54px / 653px
+    }
+  }
+
+  &__description {
+    margin: 0;
+    margin-bottom: 12px;
+
+    @media (min-width: $desktop-width-up) {
+      padding-left: 56px;
+    }
+  }
 }
