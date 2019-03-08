@@ -8,7 +8,7 @@
     list-style-type: none;
     margin-left: auto;
 
-    @media (min-width: $tablet-width-up) {
+    @media (min-width: $desktop-width-up) {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -16,8 +16,12 @@
   }
 
   &__list-item {
-    @media (min-width: $tablet-width-up) {
+    max-width: 287px;
+    margin: auto;
+
+    @media (min-width: $desktop-width-up) {
       width: 44.56521739130435%;
+      margin: 0;
     }
   }
 
