@@ -7,7 +7,7 @@
   box-sizing: border-box;
   text-align: justify;
 
-  // Смена раскладки страницы на двухколоночную, начиная с планшета
+  // Смена раскладки страницы на двухколоночную, "начиная с планшета"
   @media (min-width: $tablet-width-up) {
     display: flex;
     justify-content: space-between;

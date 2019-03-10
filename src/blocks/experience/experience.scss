@@ -1,9 +1,12 @@
+// Блок experience
+
 .experience {
 
   &__list {
     @include reset-list;
   }
 
+  // Заголовок элемента списка
   &__title {
     position: relative;
     margin: 0;
@@ -14,10 +17,12 @@
     font-family: "Myriad Pro Bold";
     text-transform: uppercase;
 
+    // Изменение внутреннего отступа заголовка на десктопе в соответствии с pixel perfect
     @media (min-width: $desktop-width-up) {
       padding-left: 8.575803981623277%; // 56px / 653px
     }
 
+    // "Черный маркер элемента списка"
     &::before {
       content: "";
 
@@ -30,6 +35,7 @@
       border-radius: 50%;
       background-color: #000;
 
+      // Изменение положения и размеров маркера на десктопе в соответствии с pixel perfect
       @media (min-width: $desktop-width-up) {
         margin-left: 14px;
         top: 8px;
@@ -39,21 +45,25 @@
       }
     }
 
+    // Блок даты
     span {
       font-family: "Myriad Pro Regular";
       color: #020202;
       text-transform: none;
 
+      // Изменение внешнего отступа на планшете
       @media (min-width: $tablet-width-up) {
         margin-left: 5px;
       }
     }
 
+    // модификатор заголовка
     &_blue {
       color: $dark-blue;
     }
   }
 
+  // Подзаголовок элемента списка
   &__subtitle {
     margin: 0;
     padding-left: 30px;
@@ -64,6 +74,7 @@
 
     text-transform: uppercase;
 
+    // Изменение внешнего отступа на десктопе в соответствии с pixel perfect
     @media (min-width: $desktop-width-up) {
       padding-left: 8.269525267993874%; // 54px / 653px
     }
@@ -73,6 +84,7 @@
     margin: 0;
     margin-bottom: 12px;
 
+    // Изменение внутреннего отступа на десктопе в соответствии с pixel perfect
     @media (min-width: $desktop-width-up) {
       padding-left: 56px;
     }

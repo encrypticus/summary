@@ -1,5 +1,6 @@
 // Левая колонка макета
 .left-col {
+  // Переопределение размеров на планшете
   @media (min-width: $tablet-width-up) {
     width: 45%;
     padding-top: 91px;

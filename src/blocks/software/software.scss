@@ -1,13 +1,17 @@
+// Блок software
+
 .software {
 
+  // Список с прогрессбарами
   &__list {
-    width: 98.62174578866769%;
+    width: 98.62174578866769%; // 644px / 653px
     margin: 0;
     padding: 0;
 
     list-style-type: none;
     margin-left: auto;
 
+    // Изменение раскладки списка на десктопе
     @media (min-width: $desktop-width-up) {
       display: flex;
       flex-wrap: wrap;
@@ -19,8 +23,9 @@
     max-width: 287px;
     margin: auto;
 
+    // Изменение ширины прогрессбара на десктопе
     @media (min-width: $desktop-width-up) {
-      width: 44.56521739130435%;
+      width: 44.56521739130435%; // 287px / 653px
       margin: 0;
     }
   }
@@ -35,6 +40,7 @@
     text-transform: uppercase;
   }
 
+  // Внешний элемент прогрессбара
   &__progress {
     width: 100%;
     height: 24px;
@@ -42,6 +48,7 @@
     background-color: #e6e6e6;
   }
 
+  // Внутренний элемент прогрессбара
   &__progress-fill {
     background-color: $dark-blue;
     height: inherit;

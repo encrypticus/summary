@@ -4,9 +4,11 @@
   margin-top: 24px;
   margin-bottom: 50px;
 
+  // Список с прогрессбарами
   &__list {
     @include reset-list;
 
+    // Элемент списка с прогрессбаром
     &-item {
       margin-bottom: 20px;
     }
@@ -35,13 +37,14 @@
     margin: auto;
   }
 
-  // Круг
+  // Круг блока
   &__point {
     width: 18px;
     height: 18px;
     border-radius: 50%;
     background-color: $dark-blue;
 
+    // Пустой элемент прогрессбара
     &_empty {
       background-color: #e6e6e6;
     }
