@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");// обраба�
 const styleLintPlugin = require('stylelint-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
-module.exports = {
+const config = {
   entry: './src/index.js',// точка входа
 
   output: {// точка выхода
@@ -26,7 +26,7 @@ module.exports = {
 
   watch: true,// отслеживать файлы в директории src для горячей пересборки
 
-  module: {// модули, обрабатывающие файлы с указаным расширением
+  module: {// модули, обрабатывающие файлы с указанным расширением
     rules: [
       {
         test: /\.js$/,
@@ -43,29 +43,6 @@ module.exports = {
       },
 
       {
-        test: /\.(scss|sass)$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
-        ]
-      },
-
-      {
-        test:/\.pug$/,
-        loaders: [
-          'html-loader',
-          'pug-html-loader?{"pretty": true, "exports": false}'
-        ]
-      },
-
-      // {
-      //   test: /\.pug$/,
-      //   exclude: /node_modules/,
-      //   loader: 'pug-loader?pretty=true'
-      // },
-
-      {
         test: /\.(ico)$/,// фавиконку положить в корень сайта
         loader: 'file-loader?name=./[name].[ext]'
       },
@@ -80,14 +57,14 @@ module.exports = {
         loader: 'file-loader?name=./fonts/[name].[ext]',
       },
 
-      {
-        test:/\.svg$/,
+      {// обработка svg-шрифтов
+        test: /\.svg$/,
         exclude: [/img/],
         loader: 'file-loader?name=./fonts/[name].[ext]'
       },
 
-      {
-        test:/\.svg$/,
+      {// обработка svg-изображений
+        test: /\.svg$/,
         exclude: [/fonts/],
         loader: 'file-loader?name=./img/[name][hash:7].[ext]'
       }
@@ -97,6 +74,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),// в параметре директория, подлежащая очистке
 
+    // преобразует index.pug в index.html и кладет в папку dist
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.pug',
@@ -104,11 +82,13 @@ module.exports = {
       favicon: "src/summary.ico"
     }),
 
+    // извлекает файл стилей и кладет в папку dist
     new MiniCssExtractPlugin({
       filename: "styles.css",
       chunkFilename: "[id].css"
     }),
 
+    // линтер стилевых файлов
     new styleLintPlugin({
       // configFile: '.stylelintrc',
       context: './',
@@ -116,13 +96,8 @@ module.exports = {
       files: ['**/*.scss', '**/*.css'],
       // failOnError: false,
       quiet: false,
-    }),
-
-    new BrowserSyncPlugin({
-      host: 'localhost',
-      port: 3000,
-      proxy: 'http://localhost:8080/'
     })
+
   ],
 
   /**
@@ -134,3 +109,70 @@ module.exports = {
     extensions: ['.js', '.pug', '.woff', '.ttf', '.svg']
   }
 };
+
+// функция вторым аргументом принимает args.mode от прописанных в package.json скриптов: args.mode = development или args.mode = production
+module.exports = (env, args) => {
+
+  if (args.mode === "development") {// в режиме разработки
+    // использовать browserSync
+    config.plugins.push(new BrowserSyncPlugin({host: 'localhost', port: 3000, proxy: 'http://localhost:8080/'}));
+
+    // не минифицировать выходной index.html
+    config.module.rules.push(
+        {
+          test: /\.pug$/,
+          loaders: [
+            'html-loader',
+            'pug-html-loader?{"pretty": true, "exports": false}'
+          ]
+        }
+    );
+
+    // генерация sourcemap; для того чтобы карта сгенерировалась обязательно нужно у обоих лоадеров:
+    // sass-loader и css-loader установить параметр sourceMap=true
+    config.devtool = "source-map";
+
+    config.module.rules.push(
+        {
+          test: /\.(scss|sass)$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            "css-loader?sourceMap=true",
+            "sass-loader?sourceMap=true"
+          ]
+        }
+    );
+  }
+
+  if (args.mode === "production") {// в режиме продакшен
+
+    // минифицировать выходной index.html
+    config.module.rules.push(
+        {
+          test: /\.pug$/,
+          loaders: [
+            'html-loader',
+            'pug-html-loader?{"pretty": false, "exports": false}'
+          ]
+        }
+    );
+
+    // обрабатывать стилевые файлы без генерации карты кода
+    config.module.rules.push(
+        {
+          test: /\.(scss|sass)$/,
+          use: [
+            MiniCssExtractPlugin.loader,
+            "css-loader",
+            "sass-loader"
+          ]
+        }
+    );
+  }
+
+  if (args.mode !== "development" && args.mode !== "production") {
+    args.mode = "development";
+  }
+
+  return config;
+}
