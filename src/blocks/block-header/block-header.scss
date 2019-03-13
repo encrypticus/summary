@@ -21,6 +21,7 @@
       height: 60px;
       margin-right: 10px;
       background-repeat: no-repeat;
+      background-position: top left;
     }
 
     // Декоративный элемент-полоска в заголовке
@@ -37,7 +38,7 @@
 
       // Иконка заголовка за модификатором
       &::before {
-        background-image: url("./blocks/block-header/img/icon-profile.svg");
+        background-image: url("./blocks/block-header/img/sprite.svg#profile-view");
 
         // Изменение размера иконки на десктопе в соответстви с pixel perfect
         @media (min-width: $desktop-width-up) {
@@ -61,7 +62,7 @@
 
       // Иконка заголовка за модификатором
       &::before {
-        background-image: url("./blocks/block-header/img/icon-contact.svg");
+        background-image: url("./blocks/block-header/img/sprite.svg#contact-view");
 
         // Изменение размера иконки на десктопе в соответстви с pixel perfect
         @media (min-width: $desktop-width-up) {
@@ -84,7 +85,7 @@
 
       // Иконка заголовка за модификатором
       &::before {
-        background-image: url("./blocks/block-header/img/icon-skills.svg");
+        background-image: url("./blocks/block-header/img/sprite.svg#skills-view");
 
         // Изменение размера иконки на десктопе в соответстви с pixel perfect
         @media (min-width: $desktop-width-up) {
@@ -108,7 +109,7 @@
 
       // Иконка заголовка за модификатором
       &::before {
-        background-image: url("./blocks/block-header/img/icon-edu.svg");
+        background-image: url("./blocks/block-header/img/sprite.svg#edu-view");
 
         // Изменение размера иконки на десктопе в соответстви с pixel perfect
         @media (min-width: $desktop-width-up) {
@@ -125,7 +126,7 @@
 
       // Иконка заголовка за модификатором
       &::before {
-        background-image: url("./blocks/block-header/img/icon-exp.svg");
+        background-image: url("./blocks/block-header/img/sprite.svg#exp-view");
 
         // Изменение размера иконки на десктопе в соответстви с pixel perfect
         @media (min-width: $desktop-width-up) {
@@ -150,7 +151,7 @@
 
       // Иконка заголовка за модификатором
       &::before {
-        background-image: url("./blocks/block-header/img/icon-software.svg");
+        background-image: url("./blocks/block-header/img/sprite.svg#software-view");
 
         // Изменение размера иконки на десктопе в соответстви с pixel perfect
         @media (min-width: $desktop-width-up) {
