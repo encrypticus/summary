@@ -6,6 +6,7 @@ const styleLintPlugin = require("stylelint-webpack-plugin"); // линтер с�
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin"); // минификатор css
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin"); // минификатор js
+const autoprefixer = require("autoprefixer");
 
 // функция вторым аргументом принимает args.mode от прописанных в package.json скриптов: args.mode = development или args.mode = production
 module.exports = (env, args) => {
@@ -67,6 +68,12 @@ module.exports = (env, args) => {
             // нужно у обоих лоадеров: sass-loader и css-loader установить параметр sourceMap=true + прописать
             // свойство сборщика "devtool: 'source-map'"
             `css-loader?sourceMap=${isDev ? true : false}`,
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: () => [autoprefixer()]
+              }
+            },
             `sass-loader?sourceMap=${isDev ? true : false}`
           ]
         },

@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^9.4.10",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "browser-sync": "^2.26.3",
@@ -25,6 +26,7 @@
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
     "pug": "^2.0.3",
     "pug-html-loader": "^1.1.5",
     "pug-loader": "^2.4.0",
@@ -74,5 +76,9 @@
       ],
       "color-hex-length": "short"
     }
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }
