@@ -37,34 +37,34 @@ mixin skills({creative = 9, teamwork = 11, innovate = 6, communication = 11} = {
         h3.skills__item-title Creative
         .skills__points
           //- отрисовка заполненных кругов
-          -for (let i = 0; i < creative; i++)
-          span.skills__point
+          - for (let i = 0; i < creative; i++)
+              span.skills__point
           //- отрисовка пустых кругов
-          -for (let i = 0, emptyPoint = totalPoint - creative; i < emptyPoint; i++)
-          span.skills__point.skills__point_empty
+          - for (let i = 0, emptyPoint = totalPoint - creative; i < emptyPoint; i++)
+              span.skills__point.skills__point_empty
 
       li.skills__list-item
         h3.skills__item-title Teamwork
         .skills__points
-          -for (let i = 0; i < teamwork; i++)
-          span.skills__point
-          -for (let i = 0, emptyPoint = totalPoint - teamwork; i < emptyPoint; i++)
-          span.skills__point.skills__point_empty
+          - for (let i = 0; i < teamwork; i++)
+              span.skills__point
+          - for (let i = 0, emptyPoint = totalPoint - teamwork; i < emptyPoint; i++)
+              span.skills__point.skills__point_empty
 
       li.skills__list-item
         h3.skills__item-title Innovate
         .skills__points
-          -for (let i = 0; i < innovate; i++)
-          span.skills__point
-          -for (let i = 0, emptyPoint = totalPoint - innovate; i < emptyPoint; i++)
-          span.skills__point.skills__point_empty
+          - for (let i = 0; i < innovate; i++)
+              span.skills__point
+          - for (let i = 0, emptyPoint = totalPoint - innovate; i < emptyPoint; i++)
+              span.skills__point.skills__point_empty
 
       li.skills__list-item
         h3.skills__item-title Communication
         .skills__points
-          -for (let i = 0; i < communication; i++)
-          span.skills__point
-          -for (let i = 0, emptyPoint = totalPoint - communication; i < emptyPoint; i++)
-          span.skills__point.skills__point_empty
+          - for (let i = 0; i < communication; i++)
+              span.skills__point
+          - for (let i = 0, emptyPoint = totalPoint - communication; i < emptyPoint; i++)
+              span.skills__point.skills__point_empty
 
 
