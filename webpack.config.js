@@ -91,7 +91,7 @@ module.exports = (env, args) => {
           loaders: [
             "html-loader",
             // минифицировать или нет index.html в зависимости от режима сборки
-            `pug-html-loader?{"pretty": ${isDev ? true : false}, "exports": false}`
+            `pug-html-loader`
           ]
         },
 
