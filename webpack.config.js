@@ -86,13 +86,31 @@ module.exports = (env, args) => {
         },
 
         {
-          test: /\.(ico)$/,// фавиконку положить в корень сайта
-          loader: 'file-loader?name=./[name].[ext]'
-        },
-
-        {
           test: /\.(png|gif|jpg|jpeg)$/,
-          loader: 'file-loader?name=./img/[name][hash:7].[ext]'// к имени изображения добавить первые 7 цифр его хэша
+          use: [
+            {
+              loader: 'file-loader?name=./img/[name][hash:7].[ext]'// к имени изображения добавить первые 7 цифр его хэша
+            },
+            {
+              loader: 'image-webpack-loader',
+              options: {
+                mozjpeg: {
+                  progressive: true,
+                  quality: 70,
+                },
+                optipng: {
+                  enabled: false,
+                },
+                pngquant: {
+                  quality: '65-90',
+                  speed: 4,
+                },
+                gifsicle: {
+                  interlaced: false,
+                },
+              },
+            }
+          ]
         },
 
         {
@@ -130,8 +148,7 @@ module.exports = (env, args) => {
       new HtmlWebpackPlugin({
         filename: 'index.html',
         template: 'src/index.pug',
-        inject: "head",
-        favicon: "src/summary.ico"
+        inject: "head"
       }),
 
       // извлекает файл стилей и кладет в папку dist
