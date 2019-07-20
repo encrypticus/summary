@@ -1,12 +1,13 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");// создает index.html из index.pug
+const HtmlWebpackPlugin = require("html-webpack-plugin"); // создает index.html из index.pug
 const CleanWebpackPlugin = require("clean-webpack-plugin");// очищает папку сборки перед пересборкой
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");// обрабатывает css
+const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // обрабатывает css
 const styleLintPlugin = require("stylelint-webpack-plugin"); // линтер стилевых файлов
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin"); // минификатор css
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin"); // минификатор js
 const autoprefixer = require("autoprefixer");
+const CopyWebpackPlugin = require('copy-webpack-plugin'); // копирует файлы
 
 // функция вторым аргументом принимает args.mode от прописанных в package.json скриптов: args.mode = development или args.mode = production
 module.exports = (env, args) => {
@@ -114,6 +115,9 @@ module.exports = (env, args) => {
     },
 
     plugins: [
+
+      new CopyWebpackPlugin([{from: './src/favicons', to: 'favicons'}]),
+
       new CleanWebpackPlugin(
           ['dist'], // директория, подлежащая очистке
           {
