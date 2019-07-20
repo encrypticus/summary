@@ -19,7 +19,7 @@ module.exports = (env, args) => {
   let isDev = mode === args.mode;
 
   const config = {
-    entry: './src/index.js',// точка входа
+    entry: "./src/index.js",// точка входа
 
     output: {// точка выхода
       filename: 'scripts.js', // имя выходного js-файла
