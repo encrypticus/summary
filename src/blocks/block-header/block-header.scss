@@ -1,24 +1,21 @@
-// Универсальный блок заголовка разделов страницы
-
 .block-header {
 
   &__title {
     display: flex;
     align-items: center;
-
     margin: 0;
-    //font-size: 2rem;
     font-size: 2.625rem; // 42px / 16px
-    font-family: "Myriad Pro Bold";
 
+    font-family: 'Myriad Pro Bold', Arial, sans-serif;
     color: $dark-blue;
     text-transform: uppercase;
 
     // Иконка заголовка
     &:before {
-      content: "";
+      content: '';
       width: 60px;
       height: 60px;
+
       margin-right: 10px;
       background-repeat: no-repeat;
       background-position: top left;
@@ -26,9 +23,10 @@
 
     // Декоративный элемент-полоска в заголовке
     &:after {
-      content: "";
+      content: '';
       flex-grow: 1;
       margin-left: 10px;
+
       height: 6px;
       background-color: #3d6cb0;
     }
@@ -38,7 +36,7 @@
 
       // Иконка заголовка за модификатором
       &::before {
-        background-image: url("./blocks/block-header/img/sprite.svg#profile-view");
+        background-image: url('./blocks/block-header/img/sprite.svg#profile-view');
 
         // Изменение размера иконки на десктопе в соответстви с pixel perfect
         @media (min-width: $desktop-width-up) {
@@ -62,7 +60,7 @@
 
       // Иконка заголовка за модификатором
       &::before {
-        background-image: url("./blocks/block-header/img/sprite.svg#contact-view");
+        background-image: url('./blocks/block-header/img/sprite.svg#contact-view');
 
         // Изменение размера иконки на десктопе в соответстви с pixel perfect
         @media (min-width: $desktop-width-up) {
@@ -85,7 +83,7 @@
 
       // Иконка заголовка за модификатором
       &::before {
-        background-image: url("./blocks/block-header/img/sprite.svg#skills-view");
+        background-image: url('./blocks/block-header/img/sprite.svg#skills-view');
 
         // Изменение размера иконки на десктопе в соответстви с pixel perfect
         @media (min-width: $desktop-width-up) {
@@ -109,7 +107,7 @@
 
       // Иконка заголовка за модификатором
       &::before {
-        background-image: url("./blocks/block-header/img/sprite.svg#edu-view");
+        background-image: url('./blocks/block-header/img/sprite.svg#edu-view');
 
         // Изменение размера иконки на десктопе в соответстви с pixel perfect
         @media (min-width: $desktop-width-up) {
@@ -126,7 +124,7 @@
 
       // Иконка заголовка за модификатором
       &::before {
-        background-image: url("./blocks/block-header/img/sprite.svg#exp-view");
+        background-image: url('./blocks/block-header/img/sprite.svg#exp-view');
 
         // Изменение размера иконки на десктопе в соответстви с pixel perfect
         @media (min-width: $desktop-width-up) {
@@ -151,7 +149,7 @@
 
       // Иконка заголовка за модификатором
       &::before {
-        background-image: url("./blocks/block-header/img/sprite.svg#software-view");
+        background-image: url('./blocks/block-header/img/sprite.svg#software-view');
 
         // Изменение размера иконки на десктопе в соответстви с pixel perfect
         @media (min-width: $desktop-width-up) {

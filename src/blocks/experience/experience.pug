@@ -17,7 +17,7 @@ mixin experience(options = [{title: "Company name ", subtitle: "Your job here", 
           p.experience__title(class = attributes.class)!= `${option.title}<span> ${option.period}</span>`
           p.experience__subtitle= option.subtitle
           //- Если указанный аргумент передан, сделать его текстовым содержимым элемента
-                      иначе вставить текст по умолчанию из файла
+              иначе вставить текст по умолчанию из файла
           - if (option.description)
               p.experience__description= option.description
           - else

@@ -38,20 +38,18 @@
   // Дополнительная внутренняя обертка для элемента about__photo
   &__container-inner {
     position: relative;
-
     width: 100%; // 56.20608899297424%
     padding: 50% 0; // хак для установки высоты блока относительно его ширины в соотношение 1:1
 
     border: 1px solid #3d6cb0;
     border-radius: 50%;
-
     box-sizing: border-box;
   }
 
   &__photo {
     position: absolute;
 
-    // "растяжение" блока в высоту и ширину относительно родителя
+    // 'растяжение' блока в высоту и ширину относительно родителя
     top: 0;
     right: 0;
     bottom: 0;
@@ -60,7 +58,6 @@
     width: 87%;
     height: 87%;
     margin: auto;
-
     border-radius: 50%;
 
     box-sizing: border-box;
@@ -84,7 +81,7 @@
   &__name {
     //font-size: 2.1rem;
     font-size: 3.375rem; // 54px / 16px
-    font-family: "Myriad Pro Light";
+    font-family: 'Myriad Pro Light', Arial, sans-serif;
 
     // переопределение размеров текста и отступа на десктопе в соответствие с pixel perfect
     @media (min-width: $desktop-width-up) {
@@ -93,9 +90,8 @@
   }
 
   &__surname {
-    //font-size: 2.5rem;
     font-size: 4rem; // 64px / 16px;
-    font-family: "Myriad Pro Bold";
+    font-family: 'Myriad Pro Bold', Arial, sans-serif;
     line-height: .6;
 
     // Переопределение размеров текста и отступа на десктопе в соответстви с pixel perfect
@@ -106,7 +102,7 @@
 
   &__profession {
     font-size: 1.625rem; // 26px / 16px
-    font-family: "Myriad Pro Bold";
+    font-family: 'Myriad Pro Bold', Arial, sans-serif;
     line-height: 2.9;
 
     // Переопределение размеров текста и отступа на десктопе в соответствии с pixel perfect

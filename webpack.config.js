@@ -39,17 +39,6 @@ module.exports = (env, args) => {
       ]
     },
 
-    // devServer: {// локальный сервер перезагрузки, hot reload
-    //   overlay: true,
-    //   // host: '192.168.14.2',
-    //   port: 8080,
-    //   host: 'localhost',// имя хоста
-    //   contentBase: path.join(__dirname, 'dist'),
-    //   watchContentBase: true,
-    //   index: 'index.html',
-    //   open: true// открыть странцу в браузере при запуске сервера
-    // },
-
     watch: true,// отслеживать файлы в директории src для горячей пересборки
 
     module: {// модули, обрабатывающие файлы с указанным расширением
